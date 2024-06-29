@@ -271,12 +271,12 @@ const Staking = ({ mode }) => {
                      <Box
         sx={{
           mb: 3,
-          backgroundColor: mode ? "#ffffff" : "#2a5282", // Adjust the last value (0.7) to change transparency
+          backgroundColor: mode ? "#ffffff" : "#112e50", // Adjust the last value (0.7) to change transparency
           padding: "10px",
           borderRadius: "10px",
           border: mode
             ? "0.4px solid #081524"
-            : "0.4px solid rgba(140, 140, 140, 0.40)",
+            : "0.4px solid #28558c",
           boxShadow: "0px 2px 9px 0px rgba(151, 151, 151, 0.19)",
         }}
       >
@@ -343,12 +343,12 @@ const Staking = ({ mode }) => {
              <Box
         sx={{
           mb: 3,
-          backgroundColor: mode ? "#ffffff" : "#2a5282", // Adjust the last value (0.7) to change transparency
+          backgroundColor: mode ? "#ffffff" : "#112e50", // Adjust the last value (0.7) to change transparency
           padding: "10px",
           borderRadius: "10px",
           border: mode
-            ? "0.4px solid #081524"
-            : "0.4px solid rgba(140, 140, 140, 0.40)",
+            ? "0.4px solid #28558c"
+            : "0.4px solid #28558c",
           boxShadow: "0px 2px 9px 0px rgba(151, 151, 151, 0.19)",
         }}
       >
@@ -373,7 +373,7 @@ const Staking = ({ mode }) => {
                 disabled={loading}
                 loadingPosition="end"
                 sx={{
-                  background: mode ? "#b99a45 " : "#ffffff",
+                  background: mode ? "#b99a45 " : "#b5a36c",
                   transition: "background 0.3s",
                   px: "30px",
                   py: "10px",
@@ -395,7 +395,7 @@ const Staking = ({ mode }) => {
                 disabled={unstakedLoading}
                 loadingPosition="end"
                 sx={{
-                  background: mode ? "#b99a45 " : "#ffffff",
+                  background: mode ? "#b99a45 " : "#b5a36c",
                   transition: "background 0.3s",
                   px: "30px",
                   py: "10px",
@@ -421,7 +421,7 @@ const Staking = ({ mode }) => {
           overflow: "hidden",
           backgroundColor: "transparent",
           mx: "auto",
-          border: mode ? "1px solid #b99a45" : "1px solid #E0F7FA",
+          border: mode ? "1px solid #b99a45" : "1px solid #28558c",
           my: "40px",
         }}
         align="center"
@@ -452,7 +452,7 @@ const Staking = ({ mode }) => {
                   <TableCell
                     sx={{
                       background:
-                        "linear-gradient(293.69deg, #E0F7FA -2.22%, #1a4578 100%)",
+                        "linear-gradient(293.69deg, #b5a36c -1.22%, #1a4578 100%)",
                     }}
                     key={column.id}
                     style={{ minWidth: column.minWidth }}

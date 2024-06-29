@@ -90,10 +90,10 @@ const Airdrops = ({ mode }) => {
     <Container id="feature" maxWidth="md">
       <Box
         sx={{
-          backgroundColor: mode ? "#ffffff" : "#112D4E",
+          backgroundColor: mode ? "#ffffff" : "#112D4E50",
           px: "20px",
           borderRadius: "10px",
-          border: "0.4px solid #081524",
+          border: "0.4px solid #28558c",
           boxShadow: "0px 2px 9px 0px rgba(151, 151, 151, 0.19)",
           textAlign: "center",
           py: "40px",
@@ -185,7 +185,7 @@ const Airdrops = ({ mode }) => {
                  <Box
         sx={{
           mb: 3,
-          backgroundColor: mode ? "#ffffff" : "#2a5282", // Adjust the last value (0.7) to change transparency
+          backgroundColor: mode ? "#ffffff" : "#112e50", // Adjust the last value (0.7) to change transparency
           padding: "10px",
           borderRadius: "10px",
           border: mode
@@ -214,7 +214,7 @@ const Airdrops = ({ mode }) => {
       <Box
         sx={{
           mb: 3,
-          backgroundColor: mode ? "#ffffff" : "#2a5282", // Adjust the last value (0.7) to change transparency
+          backgroundColor: mode ? "#ffffff" : "#112e50", // Adjust the last value (0.7) to change transparency
           padding: "10px",
           borderRadius: "10px",
           border: mode
@@ -241,7 +241,7 @@ const Airdrops = ({ mode }) => {
       <Box
         sx={{
           mb: 3,
-          backgroundColor: mode ? "#ffffff" : "#2a5282", // Adjust the last value (0.7) to change transparency
+          backgroundColor: mode ? "#ffffff" : "#112e50", // Adjust the last value (0.7) to change transparency
           padding: "10px",
           borderRadius: "10px",
           border: mode
@@ -373,10 +373,10 @@ const Airdrops = ({ mode }) => {
                   justifyContent: "center",
                   alignItems: "center",
                   gap: "20px",
-                  backgroundColor: mode ? "#ffffff" : "#2a5282",
+                  backgroundColor: mode ? "#ffffff" : "#112e50",
                   padding: "30px",
                   borderRadius: "10px",
-                  border: "0.4px solid #081524",
+                  border: "0.4px solid #28558c",
                   boxShadow: "0px 2px 9px 0px rgba(151, 151, 151, 0.19)",
                 }}
               >

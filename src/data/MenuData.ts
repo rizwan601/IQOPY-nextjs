@@ -14,19 +14,19 @@ const menu_data: MenuItem[] = [
     {
         id: 1,
         has_dropdown: false,
-        title: "Home",
+        title: "PRESALE",
         link: "/",
     },
     {
         id: 2,
         has_dropdown: false,
-        title: "Feature",
+        title: "AIRDROP",
         link: "/#feature",
     },
     {
         id: 3,
         has_dropdown: false,
-        title: "Ico Chart",
+        title: "STKING",
         link: "/#chart",
     },
     {

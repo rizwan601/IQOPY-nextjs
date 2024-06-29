@@ -3,13 +3,14 @@ import { useState } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import 'chart.js/auto';
 import Image from 'next/image';
+import Staking from "@/components/Staking/Staking";
 
 import chartImg from "@/assets/img/images/chart_img.png"
 
 const tab_title: string[] = ["Funding Allocation", "Token Distribution",];
 const chart_List_1: string[] = ["Legal & Regulation: 20%", "Business Development: 15%", "ICO Liquidity: 30%", "Development Team: 15%", "Marketing: 10%", "Cash Reserves: 10%"]
 const chart_List_2: string[] = ["Seed & Private Sale: 10%", "Development Team: 30%", "Presale: 20%", "Staking and Rewards: 25%", "Initial Circulation: 5%",  "Treasury: 10%"]
-
+let mode=false;
 const ChartArea = () => {
 
    const [activeTab, setActiveTab] = useState(0);
@@ -37,7 +38,9 @@ const ChartArea = () => {
    };
 
    return (
-      <div id="chart" className="chart-area pt-140">
+      <>
+      <Staking mode={mode}/>
+      <div  className="chart-area pt-140">
          <div className="container">
             <div className="chart-inner-wrap">
                <div className="row align-items-center">
@@ -95,6 +98,7 @@ const ChartArea = () => {
             </div>
          </div>
       </div>
+      </>
    )
 }
 

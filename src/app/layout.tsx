@@ -6,6 +6,8 @@ import Header from '@/layout/headers/Header';
 import { Outfit, Plus_Jakarta_Sans } from 'next/font/google'
 import DocumentArea from "@/components/common/DocumentArea";
 import {Web3ModalProvider} from "@/Web3ModalProvider";
+import { ThemeProvider, responsiveFontSizes, Box } from "@mui/material";
+import theme from "@/theme";
 const body = Outfit({
   weight: ['100', '200', '300', '400', '500', '700', '800', '900'],
   subsets: ['latin'],
@@ -31,9 +33,11 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning={true} className={` ${body.variable} ${heading.variable}`}>
         <Header />
+        <ThemeProvider theme={theme}>
         <Web3ModalProvider>
         {children}
         </Web3ModalProvider>
+        </ThemeProvider>
         <DocumentArea />
         <Footer />
       </body>

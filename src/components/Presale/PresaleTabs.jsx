@@ -20,7 +20,7 @@ const PresaleTabs = ({ mode }) => {
 
   return (
     <>
-        <Box sx={{textAlign:"center"}}>
+        {/* <Box sx={{textAlign:"center"}}>
         <Typography
           variant="h1"
           sx={{ color: mode ? "#b99a45" : "#b5a36c", mb: "10px" }}
@@ -71,8 +71,8 @@ const PresaleTabs = ({ mode }) => {
           Get in early to buy at the lowest price! Stay tuned for more details
           on how to participate.
         </Typography>
-        </Box>
-      <Container maxWidth="md" sx={{ paddingY: "40px" }}>
+        </Box> */}
+      <Container maxWidth="md" sx={{ paddingY: "10px" }}>
     
         <Box
           sx={{

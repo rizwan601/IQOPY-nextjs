@@ -112,7 +112,7 @@ const Airdrops = ({ mode }) => {
           >
             Welcome to our token airdrop!
           </Typography>
-          <Typography
+          {/* <Typography
             textAlign="center"
             variant="h6"
             sx={{
@@ -122,7 +122,7 @@ const Airdrops = ({ mode }) => {
             }}
           >
             Secure your share 100 token of worth 15$ per wallet.
-          </Typography>
+          </Typography> */}
           <Grid
             container
             justifyContent="center"

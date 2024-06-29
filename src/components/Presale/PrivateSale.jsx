@@ -12,7 +12,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useAccount, useConfig, useSwitchChain } from "wagmi";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
-// import NotificationModal from "../NotificationModal/NotificationModal";
+import NotificationModal from "../NotificationModal/NotificationModal"
+
+
 import {
   ActiveChain,
   presaleContract,
@@ -165,10 +167,10 @@ const PrivateSale = ({ mode }) => {
 
   return (
     <div>
-      {/* <NotificationModal
+      <NotificationModal
         notificationProps={notificationProps}
         setnotificationProps={setnotificationProps}
-      /> */}
+      />
       <Box
         sx={{
           backgroundColor: mode ? "#ffffff" : "#112D4E50", 

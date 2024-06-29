@@ -6,10 +6,10 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export default function ({ notificationProps, setnotificationProps }) {
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   const handleClose = () => {
     setnotificationProps({ ...notificationProps, modal: false });
   };
@@ -94,7 +94,7 @@ export default function ({ notificationProps, setnotificationProps }) {
                 },
               }}
               onClick={() => {
-                navigate(notificationProps?.redirect);
+                // navigate(notificationProps?.redirect);
                 handleClose();
               }}
               pt={3}

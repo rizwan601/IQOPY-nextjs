@@ -20,10 +20,10 @@ const PresaleTabs = ({ mode }) => {
 
   return (
     <>
-      <Container maxWidth="md" sx={{ paddingY: "70px" }}>
+        <Box sx={{textAlign:"center"}}>
         <Typography
           variant="h3"
-          sx={{ color: mode ? "#b99a45" : "#ffffff", mb: "10px" }}
+          sx={{ color: mode ? "#b99a45" : "#b5a36c", mb: "10px" }}
           fontWeight="600"
         >
           Token Sale Announcement
@@ -71,6 +71,9 @@ const PresaleTabs = ({ mode }) => {
           Get in early to buy at the lowest price! Stay tuned for more details
           on how to participate.
         </Typography>
+        </Box>
+      <Container maxWidth="md" sx={{ paddingY: "40px" }}>
+    
         <Box
           sx={{
             flexGrow: 1,

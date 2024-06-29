@@ -49,7 +49,7 @@ const Tokenbox = ({
       case "BUSD":
         return "./usdt.svg";
       default:
-        return "./logo1.jpg"; // Default image
+        return "./logo1.png"; // Default image
     }
   };
 
@@ -190,7 +190,7 @@ const Tokenbox = ({
               >
                 <Box px={{ md: "10px", xs: "3px" }}>
                   <img
-                    src={text === "From" ? getTokenImage(slect) : "./logo1.jpg"}
+                    src={text === "From" ? getTokenImage(slect) : "./logo1.png"}
                     alt={text === "From" ? slect : "IQOPY"}
                     width={matches ? 15 : 25}
                   />

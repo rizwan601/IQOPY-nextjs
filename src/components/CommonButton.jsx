@@ -26,15 +26,15 @@ const CommonButton = (props) => {
           fontWeight: "bold",
           padding: "5px 30px",
 
-          backgroundColor: backgroundColor || "#b99a45",
+          backgroundColor: backgroundColor || "#b5a36c",
           color: color || "#fff",
 
           "&:hover": {
-            backgroundColor: backgroundColor || "#b99a45",
+            backgroundColor: backgroundColor || "#b5a36c",
             color: color || "#fff",
           },
           "&:disabled": {
-            backgroundColor: backgroundColor || "#b99a45",
+            backgroundColor: backgroundColor || "#b5a36c",
             color: color ? color + "80" : "#fff80", // Dim the color (reduce opacity)
             cursor: "not-allowed", // Change cursor when disabled
           },

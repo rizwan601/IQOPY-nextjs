@@ -78,7 +78,7 @@ const Balance = ({ mode }) => {
             fontStyle: "normal",
             fontWeight: 700,
             fontSize: { xs: "20", md: "25px" },
-            color: "#b99a45",
+            color: "#b5a36c",
           }}
         >
           {totalBalanceNum} iQOPY
@@ -104,7 +104,7 @@ const Balance = ({ mode }) => {
             fontStyle: "normal",
             fontWeight: 700,
             fontSize: { xs: "20", md: "25px" },
-            color: "#b99a45",
+            color: "#b5a36c",
           }}
         >
           {estimatedPrice} BUSD

@@ -116,7 +116,7 @@ const Airdrops = ({ mode }) => {
             textAlign="center"
             variant="h6"
             sx={{
-              color: "#B97D05",
+              color: "#b5a36c",
               // mb: "10px",
               fontSize: { md: "25px", xs: "15px" },
             }}
@@ -132,7 +132,7 @@ const Airdrops = ({ mode }) => {
           >
             <Grid item xs={12} md={12}>
               <Box>
-                <TextField
+                {/* <TextField
                   label="Freezed Amount"
                   variant="outlined"
                   fullWidth
@@ -181,8 +181,92 @@ const Airdrops = ({ mode }) => {
                       ? 0
                       : formatEther(Number(freezedAmount))
                   }
-                />
-                <TextField
+                /> */}
+                 <Box
+        sx={{
+          mb: 3,
+          backgroundColor: mode ? "#ffffff" : "#2a5282", // Adjust the last value (0.7) to change transparency
+          padding: "10px",
+          borderRadius: "10px",
+          border: mode
+            ? "0.4px solid #081524"
+            : "0.4px solid rgba(140, 140, 140, 0.40)",
+          boxShadow: "0px 2px 9px 0px rgba(151, 151, 151, 0.19)",
+        }}
+      >
+        <Typography sx={{ color: mode ? "#000000" : "#ffffff" }} variant="h6">
+          Freezed Amount
+        </Typography>
+        <Typography
+          sx={{
+            fontStyle: "normal",
+            fontWeight: 700,
+            fontSize: { xs: "20", md: "25px" },
+            color: "#b5a36c",
+          }}
+        >
+          { freezedAmount === claimedAmount
+                      ? 0
+                      : formatEther(Number(freezedAmount))
+} 
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          mb: 3,
+          backgroundColor: mode ? "#ffffff" : "#2a5282", // Adjust the last value (0.7) to change transparency
+          padding: "10px",
+          borderRadius: "10px",
+          border: mode
+            ? "0.4px solid #081524"
+            : "0.4px solid rgba(140, 140, 140, 0.40)",
+          boxShadow: "0px 2px 9px 0px rgba(151, 151, 151, 0.19)",
+        }}
+      >
+        <Typography sx={{ color: mode ? "#000000" : "#ffffff" }} variant="h6">
+        Claimed Amount
+        </Typography>
+        <Typography
+          sx={{
+            fontStyle: "normal",
+            fontWeight: 700,
+            fontSize: { xs: "20", md: "25px" },
+            color: "#b5a36c",
+          }}
+        >
+          { claimedAmount ? formatEther(Number(claimedAmount)) : 0
+} 
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          mb: 3,
+          backgroundColor: mode ? "#ffffff" : "#2a5282", // Adjust the last value (0.7) to change transparency
+          padding: "10px",
+          borderRadius: "10px",
+          border: mode
+            ? "0.4px solid #081524"
+            : "0.4px solid rgba(140, 140, 140, 0.40)",
+          boxShadow: "0px 2px 9px 0px rgba(151, 151, 151, 0.19)",
+        }}
+      >
+        <Typography sx={{ color: mode ? "#000000" : "#ffffff" }} variant="h6">
+          Start Time
+        </Typography>
+        <Typography
+          sx={{
+            fontStyle: "normal",
+            fontWeight: 700,
+            fontSize: { xs: "20", md: "25px" },
+            color: "#b5a36c",
+          }}
+        >
+          {  Number(startTime) > 0
+                      ? moment.unix(Number(startTime)).format("lll")
+                      : "Start Time"} 
+        </Typography>
+      </Box>
+                {/* <TextField
                   label="claimed Amount"
                   variant="outlined"
                   fullWidth
@@ -227,8 +311,8 @@ const Airdrops = ({ mode }) => {
                     },
                   }}
                   value={claimedAmount ? formatEther(Number(claimedAmount)) : 0}
-                />
-                <TextField
+                /> */}
+                {/* <TextField
                   label="Start Time"
                   variant="outlined"
                   fullWidth
@@ -277,7 +361,7 @@ const Airdrops = ({ mode }) => {
                       ? moment.unix(Number(startTime)).format("lll")
                       : "Start Time"
                   }
-                />
+                /> */}
               </Box>
             </Grid>
 
@@ -289,7 +373,7 @@ const Airdrops = ({ mode }) => {
                   justifyContent: "center",
                   alignItems: "center",
                   gap: "20px",
-                  backgroundColor: mode ? "#ffffff" : "#112D4E",
+                  backgroundColor: mode ? "#ffffff" : "#2a5282",
                   padding: "30px",
                   borderRadius: "10px",
                   border: "0.4px solid #081524",

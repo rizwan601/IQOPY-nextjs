@@ -14,7 +14,7 @@ const PresaleTabs = ({ mode }) => {
   const tabContent = [<PrivateSale mode={mode} />, <Balance mode={mode} />];
   const hoverStyle = {
     "&:hover": {
-      bgcolor: "#35353B",
+      bgcolor: "#b5a36c",
     },
   };
 
@@ -22,49 +22,49 @@ const PresaleTabs = ({ mode }) => {
     <>
         <Box sx={{textAlign:"center"}}>
         <Typography
-          variant="h3"
+          variant="h1"
           sx={{ color: mode ? "#b99a45" : "#b5a36c", mb: "10px" }}
           fontWeight="600"
         >
           Token Sale Announcement
         </Typography>
         <Typography
-          variant="h5"
+          variant="h3"
           sx={{ color: mode ? "#b99a45" : "#ffffff" }}
           fontWeight="400"
         >
           We are excited to announce our token sale! Here's the breakdown:
         </Typography>
         <Typography
-          variant="h5"
+          variant="h3"
           sx={{ color: mode ? "#b99a45" : "#ffffff" }}
           fontWeight="400"
         >
           - Total Tokens: 200 million
         </Typography>
         <Typography
-          variant="h5"
+          variant="h3"
           sx={{ color: mode ? "#b99a45" : "#ffffff" }}
           fontWeight="400"
         >
           - Initial Price: $0.001 per token
         </Typography>
         <Typography
-          variant="h5"
+          variant="h3"
           sx={{ color: mode ? "#b99a45" : "#ffffff" }}
           fontWeight="400"
         >
           - Phases: 9 phases, each with 20 million tokens
         </Typography>
         <Typography
-          variant="h5"
+          variant="h3"
           sx={{ color: mode ? "#b99a45" : "#ffffff" }}
           fontWeight="400"
         >
           - Price Increase: 10% after each phase
         </Typography>
         <Typography
-          variant="h5"
+          variant="h3"
           sx={{ color: mode ? "#b99a45" : "#ffffff" }}
           fontWeight="400"
         >

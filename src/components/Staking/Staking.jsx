@@ -218,13 +218,13 @@ const Staking = ({ mode }) => {
         setnotificationProps={setnotificationProps}
       />
       <Container maxWidth="md">
-        <Typography variant="h1" textAlign="center">
+        <Typography variant="h2" textAlign="center">
           Staking
         </Typography>
         <Divider color={color} sx={{ mt: "10px" }} />
         <Grid container sx={{ mt: "10px" }} spacing={4}>
           <Grid item xs={12} md={6}>
-            <TextField
+            {/* <TextField
               fullWidth
               label="Airdrop balance"
               value={formatEther(usersAirdrops)}
@@ -267,10 +267,36 @@ const Staking = ({ mode }) => {
                   },
                 },
               }}
-            />
+            /> */}
+                     <Box
+        sx={{
+          mb: 3,
+          backgroundColor: mode ? "#ffffff" : "#2a5282", // Adjust the last value (0.7) to change transparency
+          padding: "10px",
+          borderRadius: "10px",
+          border: mode
+            ? "0.4px solid #081524"
+            : "0.4px solid rgba(140, 140, 140, 0.40)",
+          boxShadow: "0px 2px 9px 0px rgba(151, 151, 151, 0.19)",
+        }}
+      >
+        <Typography sx={{ color: mode ? "#000000" : "#ffffff" }} variant="h6">
+        Airdrop balance
+        </Typography>
+        <Typography
+          sx={{
+            fontStyle: "normal",
+            fontWeight: 700,
+            fontSize: { xs: "20", md: "25px" },
+            color: "#b5a36c",
+          }}
+        >
+          { formatEther(usersAirdrops)}
+        </Typography>
+      </Box>
           </Grid>
           <Grid item xs={12} md={6}>
-            <TextField
+            {/* <TextField
               fullWidth
               label="User balance"
               focused
@@ -313,7 +339,33 @@ const Staking = ({ mode }) => {
                   },
                 },
               }}
-            />
+            /> */}
+             <Box
+        sx={{
+          mb: 3,
+          backgroundColor: mode ? "#ffffff" : "#2a5282", // Adjust the last value (0.7) to change transparency
+          padding: "10px",
+          borderRadius: "10px",
+          border: mode
+            ? "0.4px solid #081524"
+            : "0.4px solid rgba(140, 140, 140, 0.40)",
+          boxShadow: "0px 2px 9px 0px rgba(151, 151, 151, 0.19)",
+        }}
+      >
+        <Typography sx={{ color: mode ? "#000000" : "#ffffff" }} variant="h6">
+        User balance
+        </Typography>
+        <Typography
+          sx={{
+            fontStyle: "normal",
+            fontWeight: 700,
+            fontSize: { xs: "20", md: "25px" },
+            color: "#b5a36c",
+          }}
+        >
+          {formatEther(userBalance)} 
+        </Typography>
+      </Box>
             <Stack direction="row" justifyContent="space-between">
               <LoadingButton
                 variant="contained"
@@ -321,7 +373,7 @@ const Staking = ({ mode }) => {
                 disabled={loading}
                 loadingPosition="end"
                 sx={{
-                  background: mode ? "#b99a45 " : "#E0F7FA",
+                  background: mode ? "#b99a45 " : "#ffffff",
                   transition: "background 0.3s",
                   px: "30px",
                   py: "10px",
@@ -343,7 +395,7 @@ const Staking = ({ mode }) => {
                 disabled={unstakedLoading}
                 loadingPosition="end"
                 sx={{
-                  background: mode ? "#b99a45 " : "#E0F7FA",
+                  background: mode ? "#b99a45 " : "#ffffff",
                   transition: "background 0.3s",
                   px: "30px",
                   py: "10px",
@@ -375,7 +427,7 @@ const Staking = ({ mode }) => {
         align="center"
       >
         <Box my={4}>
-          <Typography fontWeight="600" mb={1} variant="h1" textAlign="center">
+          <Typography fontWeight="600" mb={1} variant="h2" textAlign="center">
             Deposit Details
           </Typography>
         </Box>
@@ -400,7 +452,7 @@ const Staking = ({ mode }) => {
                   <TableCell
                     sx={{
                       background:
-                        "linear-gradient(293.69deg, #E0F7FA -2.22%, #b99a45 100%)",
+                        "linear-gradient(293.69deg, #E0F7FA -2.22%, #1a4578 100%)",
                     }}
                     key={column.id}
                     style={{ minWidth: column.minWidth }}

@@ -5,6 +5,7 @@ import featureImg_1 from "@/assets/img/images/features_img01.png";
 import featureImg_2 from "@/assets/img/images/features_img02.png";
 import featureImg_3 from "@/assets/img/images/features_img03.png";
 import featureImg_4 from "@/assets/img/images/features_img04.png";
+import Airdrop from "@/components/Airdrop/Airdrop";
 
 interface DataType {
    id: number;
@@ -38,9 +39,12 @@ const feature_data: DataType[] = [
       img: featureImg_4
    },
 ]
+ let mode= false;
 const FeatureOne = () => {
    return (
-      <section id="feature" className="features-area pt-140 pb-110">
+      <>
+      <Airdrop  mode={mode}/>
+      <section  className="features-area pt-140 pb-110">
          <div className="container">
             <div className="row justify-content-center">
                <div className="col-lg-10">
@@ -66,6 +70,7 @@ const FeatureOne = () => {
             </div>
          </div>
       </section>
+      </>
    )
 }
 

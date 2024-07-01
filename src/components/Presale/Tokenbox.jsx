@@ -86,7 +86,7 @@ const Tokenbox = ({
               }}
             >
               <Box px="10px">
-                <img src="./BNB.svg" width="15px" height="25px" alt="eth" />
+                <img src="./BNB.svg" width="25px" height="25px" alt="eth" />
               </Box>
               <Box
                 px="10px"

@@ -381,13 +381,13 @@ const Staking = ({ mode }) => {
                   maxWidth: "200px",
                 }}
                 color="primary"
-                onClick={address ? stakeTokens : open}
+                onClick={ stakeTokens}
               >
-                {address
-                  ? loading
-                    ? "Processing"
+                {
+                  loading
+                    ?"Processing"
                     : "Stake"
-                  : "Connect Wallet"}
+                  }
               </LoadingButton>
               <LoadingButton
                 variant="contained"
@@ -403,13 +403,12 @@ const Staking = ({ mode }) => {
                   maxWidth: "200px",
                 }}
                 color="primary"
-                onClick={address ? unstakeTokens : open}
+                onClick={unstakeTokens}
               >
-                {address
-                  ? unstakedLoading
-                    ? "Processing"
-                    : "Unstake"
-                  : "Connect Wallet"}
+                {
+  unstakedLoading ? "Processing" : "Unstake"
+}
+
               </LoadingButton>
             </Stack>
           </Grid>

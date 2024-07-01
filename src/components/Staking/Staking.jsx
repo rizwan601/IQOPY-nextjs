@@ -22,7 +22,7 @@ import { useAccount, useConfig } from "wagmi";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import {
   getCommas,
-  kafaStaking,
+  // kafaStaking,
   iqopyStaking,
 } from "../../constants/environment";
 import {

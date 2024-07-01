@@ -1,6 +1,6 @@
 "use client"
-import { Box, Container, Grid, Typography, TextField } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { Box, Container, Grid, Typography } from "@mui/material";
+import React, { useEffect, useState, useCallback } from "react";
 import { ActiveChain, airdropContract } from "../../constants/environment";
 import { useAccount, useConfig, useSwitchChain } from "wagmi";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
@@ -26,7 +26,7 @@ const Airdrops = ({ mode }) => {
   const [isClaimed, setIsClaimed] = useState(0); // Assuming isClaimed is initially set to 0
   const config = useConfig();
 
-  const init = async () => {
+  const init = useCallback(async () => {
     if (!address) {
       return;
     }
@@ -48,12 +48,11 @@ const Airdrops = ({ mode }) => {
     } catch (error) {
       console.log(error);
     }
-  };
-  console.log("airdropDetails", airdropDetails);
-  console.log("claimableAmount", claimableAmount);
+  }, [address, config]);
+
   useEffect(() => {
     init();
-  }, [address]);
+  }, [address, init]);
 
   const [freezedAmount, claimedAmount, startTime] = airdropDetails;
 
@@ -112,17 +111,7 @@ const Airdrops = ({ mode }) => {
           >
             Welcome to our token airdrop!
           </Typography>
-          {/* <Typography
-            textAlign="center"
-            variant="h6"
-            sx={{
-              color: "#b5a36c",
-              // mb: "10px",
-              fontSize: { md: "25px", xs: "15px" },
-            }}
-          >
-            Secure your share 100 token of worth 15$ per wallet.
-          </Typography> */}
+          
           <Grid
             container
             justifyContent="center"
@@ -132,56 +121,7 @@ const Airdrops = ({ mode }) => {
           >
             <Grid item xs={12} md={12}>
               <Box>
-                {/* <TextField
-                  label="Freezed Amount"
-                  variant="outlined"
-                  fullWidth
-                  margin="normal"
-                  InputProps={{
-                    sx: {
-                      color: color,
-                      "& .MuiOutlinedInput-notchedOutline": {
-                        borderColor: color,
-                      },
-                      "&:hover .MuiOutlinedInput-notchedOutline": {
-                        borderColor: color,
-                      },
-                      "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: color,
-                      },
-                    },
-                    readOnly: true,
-                  }}
-                  InputLabelProps={{
-                    sx: {
-                      color: color,
-                      "&.Mui-focused": {
-                        color: color,
-                      },
-                    },
-                  }}
-                  sx={{
-                    "& label.Mui-focused": {
-                      color: color,
-                    },
-                    "& .MuiOutlinedInput-root": {
-                      "& fieldset": {
-                        borderColor: color,
-                      },
-                      "&:hover fieldset": {
-                        borderColor: color,
-                      },
-                      "&.Mui-focused fieldset": {
-                        borderColor: color,
-                      },
-                    },
-                  }}
-                  value={
-                    freezedAmount === claimedAmount
-                      ? 0
-                      : formatEther(Number(freezedAmount))
-                  }
-                /> */}
+              
                  <Box
         sx={{
           mb: 3,
@@ -266,102 +206,7 @@ const Airdrops = ({ mode }) => {
                       : "Start Time"} 
         </Typography>
       </Box>
-                {/* <TextField
-                  label="claimed Amount"
-                  variant="outlined"
-                  fullWidth
-                  margin="normal"
-                  InputProps={{
-                    sx: {
-                      color: color,
-                      "& .MuiOutlinedInput-notchedOutline": {
-                        borderColor: color,
-                      },
-                      "&:hover .MuiOutlinedInput-notchedOutline": {
-                        borderColor: color,
-                      },
-                      "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: color,
-                      },
-                    },
-                    readOnly: true,
-                  }}
-                  InputLabelProps={{
-                    sx: {
-                      color: color,
-                      "&.Mui-focused": {
-                        color: color,
-                      },
-                    },
-                  }}
-                  sx={{
-                    "& label.Mui-focused": {
-                      color: color,
-                    },
-                    "& .MuiOutlinedInput-root": {
-                      "& fieldset": {
-                        borderColor: color,
-                      },
-                      "&:hover fieldset": {
-                        borderColor: color,
-                      },
-                      "&.Mui-focused fieldset": {
-                        borderColor: color,
-                      },
-                    },
-                  }}
-                  value={claimedAmount ? formatEther(Number(claimedAmount)) : 0}
-                /> */}
-                {/* <TextField
-                  label="Start Time"
-                  variant="outlined"
-                  fullWidth
-                  margin="normal"
-                  InputProps={{
-                    sx: {
-                      color: color,
-                      "& .MuiOutlinedInput-notchedOutline": {
-                        borderColor: color,
-                      },
-                      "&:hover .MuiOutlinedInput-notchedOutline": {
-                        borderColor: color,
-                      },
-                      "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: color,
-                      },
-                    },
-                    readOnly: true,
-                  }}
-                  InputLabelProps={{
-                    sx: {
-                      color: color,
-                      "&.Mui-focused": {
-                        color: color,
-                      },
-                    },
-                  }}
-                  sx={{
-                    "& label.Mui-focused": {
-                      color: color,
-                    },
-                    "& .MuiOutlinedInput-root": {
-                      "& fieldset": {
-                        borderColor: color,
-                      },
-                      "&:hover fieldset": {
-                        borderColor: color,
-                      },
-                      "&.Mui-focused fieldset": {
-                        borderColor: color,
-                      },
-                    },
-                  }}
-                  value={
-                    Number(startTime) > 0
-                      ? moment.unix(Number(startTime)).format("lll")
-                      : "Start Time"
-                  }
-                /> */}
+               
               </Box>
             </Grid>
 

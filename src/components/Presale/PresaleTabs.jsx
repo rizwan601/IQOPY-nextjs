@@ -1,5 +1,5 @@
 import { Box, Container, Divider, Tab, Tabs, Typography } from "@mui/material";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PrivateSale from "./PrivateSale";
 import Balance from "./Balance";
 // import PhasesInfo from "./PhasesInfo";
@@ -11,7 +11,11 @@ const PresaleTabs = ({ mode }) => {
     setValue(newValue);
   };
 
-  const tabContent = [<PrivateSale mode={mode} />, <Balance mode={mode} />];
+  const tabContent = [
+    <PrivateSale key="privateSale" mode={mode} />,
+    <Balance key="balance" mode={mode} />
+  ];
+
   const hoverStyle = {
     "&:hover": {
       bgcolor: "#b5a36c",
@@ -20,7 +24,7 @@ const PresaleTabs = ({ mode }) => {
 
   return (
     <>
-        {/* <Box sx={{textAlign:"center"}}>
+      {/* <Box sx={{textAlign:"center"}}>
         <Typography
           variant="h1"
           sx={{ color: mode ? "#b99a45" : "#b5a36c", mb: "10px" }}
@@ -71,9 +75,8 @@ const PresaleTabs = ({ mode }) => {
           Get in early to buy at the lowest price! Stay tuned for more details
           on how to participate.
         </Typography>
-        </Box> */}
+      </Box> */}
       <Container maxWidth="md" sx={{ paddingY: "10px" }}>
-    
         <Box
           sx={{
             flexGrow: 1,

@@ -4,8 +4,8 @@ import { readContract } from "@wagmi/core";
 import { presaleContract } from "../../constants/environment";
 import { formatEther } from "viem";
 import { useAccount, useConfig } from "wagmi";
-let soldTokens = 90;
-let totalTokens = 90;
+// let soldTokens = 90;
+// let totalTokens = 90;
 let amountRaisedMATIC = 90;
 const Balance = ({ mode }) => {
   const config = useConfig();
@@ -16,7 +16,7 @@ const Balance = ({ mode }) => {
   console.log("estPrice", estPrice);
   const estimatedPrice = estPrice > 0 ? 1 / estPrice : "0";
 
-  const soldPercentage = (soldTokens / totalTokens) * 100;
+  // const soldPercentage = (soldTokens / totalTokens) * 100;
 
   const totalFormatedBalance = formatEther(userBalance);
   const totalBalanceNum = Number(totalFormatedBalance).toFixed(2);

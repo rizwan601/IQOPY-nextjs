@@ -8,7 +8,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import { Typography } from "@mui/material";
 // import { useNavigate } from "react-router-dom";
 
-export default function ({ notificationProps, setnotificationProps }) {
+const NotificationDialog = ({ notificationProps, setnotificationProps }) => {
   // let navigate = useNavigate();
   const handleClose = () => {
     setnotificationProps({ ...notificationProps, modal: false });
@@ -106,4 +106,9 @@ export default function ({ notificationProps, setnotificationProps }) {
       </DialogActions>
     </Dialog>
   );
-}
+};
+
+// Assign a display name to the component
+NotificationDialog.displayName = 'NotificationDialog';
+
+export default NotificationDialog;

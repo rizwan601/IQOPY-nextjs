@@ -8,14 +8,11 @@ import Sidebar from "./Menu/Sidebar";
 import HeaderOffcanvas from "./Menu/HeaderOffcanvas";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import logo_1 from "@/assets/img/logo/logo.png";
-import CommonButton from "@/components/CommonButton";
-
+import Customaddress from "@/components/Customaddress/Customaddress";
 const Header = () => {
-    const { open } = useWeb3Modal();
     const { sticky } = UseSticky();
     const [isActive, setIsActive] = useState<boolean>(false);
     const [offCanvas, setOffCanvas] = useState<boolean>(false);
-
     return (
         <>
             <header id="header">
@@ -34,7 +31,8 @@ const Header = () => {
                                         <div className="header-action">
                                             <ul className="list-wrap">
                                                 {/* <li className="header-login"><Link href="/register">Register<i className="fas fa-user"></i></Link></li> */}
-                                                <CommonButton onClick={()=>open()}>Connect wallet</CommonButton>
+                                                {/* <CommonButton onClick={()=>open()}>{<Customaddress/>?"Connect Wallet":"Connected"}</CommonButton> */}
+                                                <Customaddress/>
                                                 {/*<li className="offcanvas-menu"><a onClick={() => setOffCanvas(true)} style={{ cursor: "pointer" }} className="menu-tigger"><i className="fas fa-bars"></i></a></li>*/}
                                             </ul>
                                         </div>

@@ -32,9 +32,10 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
       <body suppressHydrationWarning={true} className={` ${body.variable} ${heading.variable}`}>
-        <Header />
+       
         <ThemeProvider theme={theme}>
         <Web3ModalProvider>
+        <Header />
         {children}
         </Web3ModalProvider>
         </ThemeProvider>

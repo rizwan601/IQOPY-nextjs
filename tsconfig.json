@@ -23,6 +23,6 @@
       "@/assets/*": ["./public/assets/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/privatesale/index.client.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/privatesale/index.client.js", "src/layout/headers/Header.tsx"],
   "exclude": ["node_modules"]
 }

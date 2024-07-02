@@ -24,6 +24,7 @@ import {
   getCommas,
   // kafaStaking,
   iqopyStaking,
+  airdropContract
 } from "../../constants/environment";
 import {
   writeContract,
@@ -110,7 +111,7 @@ const Staking = ({ mode }) => {
   const unstakeTokens = async () => {
     try {
       setUnstakedLoading(true);
-      // First transaction: Approve
+      
       let approveHash = await writeContract(config, {
         ...iqopyStaking,
         functionName: "stopStake",
@@ -184,7 +185,7 @@ const Staking = ({ mode }) => {
         }),
         readContract(config, {
           ...iqopyStaking,
-          functionName: "airdrops",
+          functionName: "stake",
           args: [address],
         }),
         readContract(config, {
@@ -408,7 +409,6 @@ const Staking = ({ mode }) => {
                 {
   unstakedLoading ? "Processing" : "Unstake"
 }
-
               </LoadingButton>
             </Stack>
           </Grid>

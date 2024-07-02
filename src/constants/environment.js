@@ -21,7 +21,7 @@ export const kafaStaking = {
 };
 
 export const iqopyStaking = {
-  address: "0xdaD7DC7823882498584a547005A43C11b4984013", //testnet
+  address: "0xDFA58Ec2F5A44d2FA5E907a58619Df9559b9046b", //testnet
   abi: stakingAbi,
 };
 

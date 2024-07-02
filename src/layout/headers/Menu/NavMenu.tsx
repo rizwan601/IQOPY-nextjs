@@ -11,7 +11,6 @@ const NavMenu = () => {
     useEffect(() => {
         setActiveMenuItem(currentRoute);
     }, [currentRoute]);
-
     const handleMenuItemClick = (menuLink: string) => {
         setActiveMenuItem(menuLink);
     };

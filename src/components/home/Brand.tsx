@@ -57,7 +57,7 @@ const settings = {
 
 const Brand = () => {
    return (
-      <div className="brand-area">
+      <div  className="brand-area">
          <div className="container-fluid p-0">
             <div className="row g-0">
                <div className="col-lg-12">

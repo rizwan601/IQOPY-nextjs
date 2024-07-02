@@ -39,8 +39,10 @@ const ChartArea = () => {
 
    return (
       <>
+      <section id="chart">
       <Staking mode={mode}/>
-      <div  className="chart-area pt-140">
+      <div className="chart-area pt-140">
+      
          <div className="container">
             <div className="chart-inner-wrap">
                <div className="row align-items-center">
@@ -98,6 +100,7 @@ const ChartArea = () => {
             </div>
          </div>
       </div>
+      </section>
       </>
    )
 }

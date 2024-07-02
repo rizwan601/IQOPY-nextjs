@@ -213,7 +213,7 @@ const Staking = ({ mode }) => {
   const [startTime, withdrawnAmount] = stakingDetails;
 
   return (
-    <Container id="chart" maxWidth="lg" sx={{ py: "50px" }}>
+    <Container  maxWidth="lg" sx={{ py: "50px" }}>
       <NotificationModal
         notificationProps={notificationProps}
         setnotificationProps={setnotificationProps}

@@ -43,8 +43,9 @@ const feature_data: DataType[] = [
 const FeatureOne = () => {
    return (
       <>
+     
+      <section  id="feature">
       <Airdrop  mode={mode}/>
-      <section  className="features-area pt-140 pb-110">
          <div className="container">
             <div className="row justify-content-center">
                <div className="col-lg-10">

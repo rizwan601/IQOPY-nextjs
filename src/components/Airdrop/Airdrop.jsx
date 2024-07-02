@@ -86,7 +86,7 @@ const Airdrops = ({ mode }) => {
   console.log("Number(claimedAmount)", claimedAmount);
 
   return (
-    <Container id="feature" maxWidth="md">
+    <Container maxWidth="md">
       <Box
         sx={{
           backgroundColor: mode ? "#ffffff" : "#112D4E50",
